@@ -457,7 +457,7 @@ class SignatureV4 extends AbstractSignature implements EndpointSignatureInterfac
             ->set('X-Amz-Algorithm', 'AWS4-HMAC-SHA256')
             ->set('X-Amz-Credential', $credential)
             ->set('X-Amz-Date', gmdate('Ymd\THis\Z', $this->getTimestamp()))
-            ->set('X-Amz-SignedHeaders', 'Host')
+            ->set('X-Amz-SignedHeaders', 'host')
             ->set('X-Amz-Expires', $this->convertExpires($expires));
     }
 
